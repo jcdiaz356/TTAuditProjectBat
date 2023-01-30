@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dataservicios.ttauditprojectbat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission." />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        android:maxSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.dataservicios.ttauditprojectbat.app.AppController"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.NewsInformationsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+
+        <service
+            android:name="com.dataservicios.ttauditprojectbat.services.UplodMediaService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.MediaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dataservicios.ttauditprojectbat.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dataservicios.ttauditprojectbat.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dataservicios.ttauditprojectbat.PanelAdminActivity"
+            android:label="@string/title_activity_panel_admin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.StoresActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.dataservicios.ttauditprojectbat.PanelAdminActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.PanelAdminActivity" />
+        </activity>
+        <activity
+            android:name=".view.MapsRouteActivity"
+            android:label="@string/title_activity_maps_route"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoresActivity" />
+        </activity>
+        <activity
+            android:name=".view.PollPublicityActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.PublicitiesActivity" />
+        </activity>
+        <activity
+            android:name=".view.PublicitiesActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoreAuditActivity" />
+        </activity>
+        <activity
+            android:name=".view.StoreAuditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoresActivity" />
+        </activity>
+        <activity
+            android:name=".view.PollActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoreAuditActivity" />
+        </activity>
+        <activity
+            android:name=".view.EditStoreActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoreAuditActivity" />
+        </activity>
+        <activity
+            android:name="com.dataservicios.ttauditprojectbat.About"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name=".ABOUT" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".view.OrdersProduct"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.StoreAuditActivity" />
+        </activity>
+        <activity
+            android:name=".view.PollProductActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dataservicios.ttauditprojectbat.view.ProductCompetityActivity" />
+        </activity>
+        <activity
+            android:name=".view.AndroidCustomGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.NewStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ProductCompetityActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name="com.dataservicios.ttauditprojectbat.view.CameraActivity" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dataservicios.ttauditprojectbat.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

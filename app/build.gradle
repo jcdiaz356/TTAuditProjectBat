@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.dataservicios.ttauditprojectbat"
+        minSdk 27
+        targetSdk 33
+        versionCode 12
+        versionName "4.3.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+//    useLibrary 'org.apache.http.legacy'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude "META-INF/DEPENDENCIES"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    implementation 'com.j256.ormlite:ormlite-core:4.48'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+  //  implementation 'com.zoonref:simple-view-behavior:1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'io.github.yavski:fab-speed-dial:1.0.6'
+//    implementation 'com.google.android.gms:play-services-maps:10.2.4'
+    implementation 'com.google.android.gms:play-services:11.0.4'
+    //implementation 'io.fotoapparat:fotoapparat:2.4.0'
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    implementation 'id.zelory:compressor:2.1.0'
+  //  implementation 'id.zelory:compressor:3.0.1'
+    implementation group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.3.1'
+
+
+    //    Toast
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+}
