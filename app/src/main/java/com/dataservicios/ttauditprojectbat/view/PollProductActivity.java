@@ -436,24 +436,58 @@ public class PollProductActivity extends AppCompatActivity {
                     break;
 
 
-// ----------------------- Actividades de la competencia Bat--------------------
+//*************** ACTIVIDADES DE COMPETECIAS PMI ******************
                 case 14:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
-
-
-//------------------HYPE ----------------------
-                case 45:
+//*************** ACTIVIDADES DE COMPETECIAS CIGARRILLOS ******************
+                case 80:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+//------------------PARTNERSHIPS ----------------------
+                case 70:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
 
-                case 46:
+                case 71:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
 
-                case 47:
+                case 72:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
+
+                case 73:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+                case 74:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+                case 75:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+                case 76:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+
+// *********************** Incidencias cigarreras Bat **************************
+                case 10:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+                case 11:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+// ************************* OTROS INSIGHTS **************************
+                case 90:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+
             }
         }
 
@@ -533,30 +567,78 @@ public class PollProductActivity extends AppCompatActivity {
                     productRepo.update(product);
                     finish();
                     break;
-// ----------------------- Actividades de la competencia Bat--------------------
-
-
+//*************** ACTIVIDADES DE COMPETECIAS PMI ******************
                 case 14:
                     product.setStatus(1);
                     productRepo.update(product);
                     finish();
                     break;
+//*************** ACTIVIDADES DE COMPETECIAS CIGARRILLOS ******************
+                case 80:
+                    product.setStatus(1);
+                    productRepo.update(product);
+                    finish();
+                    break;
 
-// -----------------PARTERSHIPO -------------------
-                case 45:
+// *********************** PARTERSHIPO *************************
+                case 70:
 
-                    poll.setOrder(46);
+                    poll.setOrder(71);
                     openPollProductActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
-                case 46:
-//                poll.setOrder(5);
-//                openPollActivity(activity, store_id,audit_id,poll);
-                    poll.setOrder(47);
+                case 71:
+                    poll.setOrder(72);
                     openPollProductActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
-                case 47:
+                case 72:
+                    poll.setOrder(73);
+                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 73:
+                    poll.setOrder(74);
+                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 74:
+                    poll.setOrder(75);
+                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 75:
+                    poll.setOrder(76);
+                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 76:
+                    product.setStatus(1);
+                    productRepo.update(product);
+                    finish();
+                    break;
+// ----------------------- Incidencias cigarreras Bat--------------------
+                case 10:
+                    if(isYesNo==1) {
+//                        poll.setOrder(21);
+                        poll.setOrder(11);
+                        openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                        finish();
+                    } else if(isYesNo==0){
+                        poll.setOrder(11);
+                        openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+                        finish();
+                    }
+                    break;
+
+                case 11:
+                    product.setStatus(1);
+                    productRepo.update(product);
+                    finish();
+                    break;
+
+// ----------------------- OTROS INSIGHTS *************
+                case 90:
                     product.setStatus(1);
                     productRepo.update(product);
                     finish();

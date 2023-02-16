@@ -430,24 +430,7 @@ public class PollActivity extends AppCompatActivity {
         if(company.getApp_id().equals("promotoria")) {
             switch (orderPoll) {
 //--------Información-----------
-                case 1:
-                    if (isYesNo == 1) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    } else if (isYesNo == 0) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                       // if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
-                    }
-                    break;
-                case 2:
 
-                    if (isYesNo == 1) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                      //  if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId())) return false;
-                    } else if (isYesNo == 0) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                      //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
-                    }
-                    break;
 
 
 //--------Efectividad-----
@@ -458,8 +441,26 @@ public class PollActivity extends AppCompatActivity {
                     break;
 
 
-// ----------------------- Auditoria Bat--------------------
+//***************  INFORMACIÓN DE AUDITORIA (CIGARRILLOS) ******************
 
+                case 1:
+                    if (isYesNo == 1) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    } else if (isYesNo == 0) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                        // if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
+                    }
+                    break;
+                case 2:
+
+                    if (isYesNo == 1) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                        //  if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId())) return false;
+                    } else if (isYesNo == 0) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                        //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
+                    }
+                    break;
                 case 5:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
@@ -479,6 +480,24 @@ public class PollActivity extends AppCompatActivity {
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
                 case 9:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+
+//***************  INFORMACIÓN DE AUDITORIA (VUSE) ******************
+
+                case 50:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+                case 51:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+                case 52:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+                case 53:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
+                case 54:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
 
@@ -802,37 +821,6 @@ public class PollActivity extends AppCompatActivity {
 
         if(company.getApp_id().equals("promotoria")) {
             switch (orderPoll) {
-//-------------Introducción---------------------
-                case 1:
-                    if(isYesNo==1) {
-                        poll.setOrder(2);
-                        openActivity(activity, store_id,audit_id,poll,route_id);
-                        finish();
-                    } else if(isYesNo==0){
-                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
-                        for (AuditRoadStore m: auditRoadStores){
-                            m.setAuditStatus(1);
-                            auditRoadStoreRepo.update(m);
-                        }
-                        finish();
-                    }
-                    break;
-                //break;
-                case 2:
-                    if(isYesNo==1) {
-                        auditRoadStore.setAuditStatus(1);
-                        auditRoadStoreRepo.update(auditRoadStore);
-                        finish();
-                    } else if(isYesNo==0){
-                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
-                        for (AuditRoadStore m: auditRoadStores){
-                            m.setAuditStatus(1);
-                            auditRoadStoreRepo.update(m);
-                        }
-                        finish();
-                    }
-                    break;
-
 
                 case 3:
 
@@ -852,7 +840,37 @@ public class PollActivity extends AppCompatActivity {
                     break;
 
 
-//----------------------- Auditoria Bat--------------------
+//***************  INFORMACIÓN DE AUDITORIA (CIGARRILLOS) ******************
+
+                case 1:
+                    if(isYesNo==1) {
+                        poll.setOrder(2);
+                        openActivity(activity, store_id,audit_id,poll,route_id);
+                        finish();
+                    } else if(isYesNo==0){
+                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
+                        for (AuditRoadStore m: auditRoadStores){
+                            m.setAuditStatus(1);
+                            auditRoadStoreRepo.update(m);
+                        }
+                        finish();
+                    }
+                    break;
+                //break;
+                case 2:
+                    if(isYesNo==1) {
+                        poll.setOrder(5);
+                        openActivity(activity, store_id,audit_id,poll,route_id);
+                        finish();
+                    } else if(isYesNo==0){
+                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
+                        for (AuditRoadStore m: auditRoadStores){
+                            m.setAuditStatus(1);
+                            auditRoadStoreRepo.update(m);
+                        }
+                        finish();
+                    }
+                    break;
 
                 case 5:
                     poll.setOrder(6);
@@ -897,10 +915,33 @@ public class PollActivity extends AppCompatActivity {
                 intentP.putExtra("publicity_id"          , poll.getPublicity_id());
                 intentP.putExtra("product_id"            , poll.getProduct_id());
                 startActivity(intentP);
-
                 finish();
-
                 break;
+//***************  INFORMACIÓN DE AUDITORIA (VUSE) ******************
+                case 50:
+                    poll.setOrder(51);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 51:
+                    poll.setOrder(52);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 52:
+                    poll.setOrder(53);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 53:
+                    poll.setOrder(54);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 54:
+                    auditRoadStore.setAuditStatus(1);
+                    auditRoadStoreRepo.update(auditRoadStore);
+                    finish();
 
 
 // ----------------------- Incidencias cigarreras Bat--------------------
@@ -1023,11 +1064,11 @@ public class PollActivity extends AppCompatActivity {
                     finish();
                     break;
 
-                case 50:
-                    auditRoadStore.setAuditStatus(1);
-                    auditRoadStoreRepo.update(auditRoadStore);
-                    finish();
-                    break;
+//                case 50:
+//                    auditRoadStore.setAuditStatus(1);
+//                    auditRoadStoreRepo.update(auditRoadStore);
+//                    finish();
+//                    break;
 
 
 //                    ****************** COMENTARIOS ADICIONALES

@@ -343,49 +343,77 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
 
 
                     if (company.getApp_id().equals("promotoria")) {
-                        if (audit_id == 62) {
+//                        if (audit_id == 62) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(1);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//
+//
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+//                        if (audit_id == 115) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(16);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+//                        if (audit_id == 100) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(3);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+
+
+
+
+//***************  INFORMACIÓN DE AUDITORIA (CIGARRILLOS) ******************
+                        if (audit_id == 102) {
                             Poll poll = new Poll();
                             poll.setOrder(1);
 //                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-
-
                             openActivity(activity, store_id, audit_id, poll, route_id);
                         }
-                        if (audit_id == 115) {
+
+//***************  INFORMACIÓN DE AUDITORIA (VUSE) ******************
+                        if (audit_id == 132) {
                             Poll poll = new Poll();
-                            poll.setOrder(16);
+                            poll.setOrder(50);
 //                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
                             openActivity(activity, store_id, audit_id, poll, route_id);
                         }
-                        if (audit_id == 100) {
-                            Poll poll = new Poll();
-                            poll.setOrder(3);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
-                        }
-
-
-                        //*************** SOLO PARA AUDITORIA QUIEBRE DE STOCK******************
+//*************** SOLO PARA AUDITORIA QUIEBRE DE STOCK******************
                         // Nota: Realiza una petici{on al stock de productos
                         if (audit_id == 101) {
                             new syncProjectionSales(audit_id).execute();
                         }
 
-                        if (audit_id == 102) {
-                            Poll poll = new Poll();
-                            poll.setOrder(5);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
-                        }
+//*************** INCIDENCIAS******************
+
+//                        if (audit_id == 103) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(10);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+
                         if (audit_id == 103) {
-                            Poll poll = new Poll();
-                            poll.setOrder(10);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
+
+                            Intent intent = new Intent(activity, ProductCompetityActivity.class);
+                            intent.putExtra("store_id", store_id);
+                            intent.putExtra("route_id", route_id);
+                            intent.putExtra("audit_id", audit_id);
+                            intent.putExtra("orderPoll", 0);
+//                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+                            intent.putExtra("category_product_id", 224);
+                            intent.putExtra("publicity_id", 0);
+                            intent.putExtra("product_id", 0);
+                            startActivity(intent);
+
                         }
 
+//*************** ACTIVIDADES DE COMPETECIAS PMI ******************
                         if (audit_id == 104) {
-
                             Intent intent = new Intent(activity, ProductCompetityActivity.class);
                             intent.putExtra("store_id", store_id);
                             intent.putExtra("route_id", route_id);
@@ -396,17 +424,22 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
                             intent.putExtra("publicity_id", 0);
                             intent.putExtra("product_id", 0);
                             startActivity(intent);
-
                         }
 
-                        if (audit_id == 129) {
-                            Poll poll = new Poll();
-                            poll.setOrder(40);
-//                            poll.setOrder(51);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
+//*************** ACTIVIDADES DE COMPETECIAS CIGARRILLOS ******************
+                        if (audit_id == 133) {
+                            Intent intent = new Intent(activity, ProductCompetityActivity.class);
+                            intent.putExtra("store_id", store_id);
+                            intent.putExtra("route_id", route_id);
+                            intent.putExtra("audit_id", audit_id);
+                            intent.putExtra("orderPoll", 0);
+//                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+                            intent.putExtra("category_product_id", 225);
+                            intent.putExtra("publicity_id", 0);
+                            intent.putExtra("product_id", 0);
+                            startActivity(intent);
                         }
-
+//*************** PARTNERSHIPS ******************
                         if (audit_id == 130) {
 
                             Intent intent = new Intent(activity, ProductCompetityActivity.class);
@@ -422,14 +455,41 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
 
                         }
 
-                        //*************** comentarios adicionales ******************
-                        if (audit_id == 131) {
-                            Poll poll = new Poll();
-                            poll.setOrder(60);
-//                            poll.setOrder(51);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
+  //******************* OTROS INSIGHTS ******************
+                        if (audit_id == 134) {
+
+                            Intent intent = new Intent(activity, ProductCompetityActivity.class);
+                            intent.putExtra("store_id", store_id);
+                            intent.putExtra("route_id", route_id);
+                            intent.putExtra("audit_id", audit_id);
+                            intent.putExtra("orderPoll", 0);
+//                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+                            intent.putExtra("category_product_id", 226);
+                            intent.putExtra("publicity_id", 0);
+                            intent.putExtra("product_id", 0);
+                            startActivity(intent);
+
                         }
+
+
+//                        if (audit_id == 129) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(40);
+////                            poll.setOrder(51);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+
+
+
+                        //*************** comentarios adicionales ******************
+//                        if (audit_id == 131) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(60);
+////                            poll.setOrder(51);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
 
                     }
 

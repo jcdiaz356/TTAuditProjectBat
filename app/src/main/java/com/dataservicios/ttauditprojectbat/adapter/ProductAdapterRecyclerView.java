@@ -82,16 +82,23 @@ public class ProductAdapterRecyclerView extends RecyclerView.Adapter<ProductAdap
             public void onClick(View v) {
                 Poll poll = new Poll();
                 if(company.getApp_id().equals("promotoria")) {
-                    if(audit_id == 100){
-                        poll.setOrder(4);
-                    } else if (audit_id == 101){
+//                    if(audit_id == 100){
+//                        poll.setOrder(4);
+//                    } else
+                    if (audit_id == 101){
                         poll.setOrder(15);
                     } else if (audit_id == 102){
                         poll.setOrder(9);
+                    } else if (audit_id == 103){
+                        poll.setOrder(10);
                     } else if (audit_id == 104){
                         poll.setOrder(14);
+                    }  else if (audit_id == 133){
+                        poll.setOrder(80);
                     } else if (audit_id == 130){
-                        poll.setOrder(45);
+                        poll.setOrder(70);
+                    } else if (audit_id == 134){
+                        poll.setOrder(90);
                     }
                 }
                 if(company.getApp_id().equals("bodega")) {

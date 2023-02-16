@@ -132,13 +132,6 @@ public class MainActivity extends AppCompatActivity {
           //  company = AuditUtil.getCompany(1,1,app_id);
 
 
-
-
-
-
-
-
-
 //            -----------------PARA PRUEBAS----------------------
 
 //            company.setId(284);
