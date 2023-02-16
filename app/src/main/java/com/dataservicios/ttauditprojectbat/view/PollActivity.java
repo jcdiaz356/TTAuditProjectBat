@@ -879,18 +879,10 @@ public class PollActivity extends AppCompatActivity {
                     break;
 
                 case 6:
-                    poll.setOrder(30);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-
-                case 30:
                     poll.setOrder(7);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
-
                 case 7:
                     poll.setOrder(8);
                     openActivity(activity, store_id,audit_id,poll,route_id);
@@ -898,6 +890,12 @@ public class PollActivity extends AppCompatActivity {
                     break;
 
                 case 8:
+                    poll.setOrder(30);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+
+                case 30:
                     poll.setOrder(31);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
