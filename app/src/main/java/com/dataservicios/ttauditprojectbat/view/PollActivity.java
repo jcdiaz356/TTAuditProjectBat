@@ -940,7 +940,7 @@ public class PollActivity extends AppCompatActivity {
                     auditRoadStore.setAuditStatus(1);
                     auditRoadStoreRepo.update(auditRoadStore);
                     finish();
-
+                    break;
 
 // ----------------------- Incidencias cigarreras Bat--------------------
 
