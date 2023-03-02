@@ -9,8 +9,8 @@ android {
         applicationId "com.dataservicios.ttauditprojectbat"
         minSdk 27
         targetSdk 33
-        versionCode 14
-        versionName "4.4.2"
+        versionCode 15
+        versionName "4.5.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
