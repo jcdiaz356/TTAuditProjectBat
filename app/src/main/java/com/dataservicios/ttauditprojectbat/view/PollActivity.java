@@ -631,7 +631,7 @@ public class PollActivity extends AppCompatActivity {
                         case 110:
                             if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                             break;
-                        case 50:
+                        case 7:
                             if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                             break;
                         case 120:
@@ -1160,11 +1160,11 @@ public class PollActivity extends AppCompatActivity {
 
 
                 case 110:
-                    poll.setOrder(50);
+                    poll.setOrder(7);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
-                case 50:
+                case 7:
                     poll.setOrder(120);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
@@ -1184,6 +1184,11 @@ public class PollActivity extends AppCompatActivity {
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
+                case 140:
+                    poll.setOrder(21);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
 
                 case 21:
 //                    if(isYesNo==1) {
@@ -1199,6 +1204,7 @@ public class PollActivity extends AppCompatActivity {
 //                    }
                    auditRoadStore.setAuditStatus(1);
                    auditRoadStoreRepo.update(auditRoadStore);
+                    finish();
                    break;
 
 //                case 7:

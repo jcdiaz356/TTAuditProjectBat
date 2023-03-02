@@ -696,7 +696,7 @@ public class PollProductActivity extends AppCompatActivity {
 
                 case 10:
                     poll.setOrder(11);
-                    openPollActivity(activity, store_id,audit_id,poll);
+                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
 
