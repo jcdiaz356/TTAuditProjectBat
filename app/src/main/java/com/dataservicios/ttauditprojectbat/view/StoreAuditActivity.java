@@ -494,6 +494,8 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
                     }
 
                     if (company.getApp_id().equals("bodega")) {
+
+//                        ************ INFORMACI{ON GENERAL ******************************
                         if (audit_id == 116) {
                             Poll poll = new Poll();
                             poll.setOrder(1);
@@ -501,12 +503,13 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
                             openActivity(activity, store_id, audit_id, poll, route_id);
                         }
 
-                        if (audit_id == 100) {
-                            Poll poll = new Poll();
-                            poll.setOrder(3);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
-                        }
+//                        if (audit_id == 100) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(3);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
+//                        ******************* QUIEBRE DE STOCK ****************
                         if (audit_id == 101) {
 
                             Intent intent = new Intent(activity, ProductCompetityActivity.class);
@@ -522,38 +525,53 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
 
                         }
 
-                        if (audit_id == 117) {
+//                        if (audit_id == 117) {
+//
+//                            Intent intent = new Intent(activity, ProductCompetityActivity.class);
+//                            intent.putExtra("store_id", store_id);
+//                            intent.putExtra("route_id", route_id);
+//                            intent.putExtra("audit_id", audit_id);
+//                            intent.putExtra("orderPoll", 0);
+////                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+//                            intent.putExtra("category_product_id", 200);
+//                            intent.putExtra("publicity_id", 0);
+//                            intent.putExtra("product_id", 0);
+//                            startActivity(intent);
+//
+//                        }
 
+// ********************** INFORMACI{ON DE AUDITORIA *****************************
+                        if (audit_id == 102) {
+                            Poll poll = new Poll();
+                            //poll.setOrder(7);
+                            poll.setOrder(110);
+//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+                            openActivity(activity, store_id, audit_id, poll, route_id);
+                        }
+
+// ********************** INCIDENCIAS *****************************
+                        if (audit_id == 103) {
                             Intent intent = new Intent(activity, ProductCompetityActivity.class);
                             intent.putExtra("store_id", store_id);
                             intent.putExtra("route_id", route_id);
                             intent.putExtra("audit_id", audit_id);
                             intent.putExtra("orderPoll", 0);
 //                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
-                            intent.putExtra("category_product_id", 200);
+                            intent.putExtra("category_product_id", 224);
                             intent.putExtra("publicity_id", 0);
                             intent.putExtra("product_id", 0);
                             startActivity(intent);
-
                         }
+//                        if (audit_id == 103) {
+//                            Poll poll = new Poll();
+//                            poll.setOrder(10);
+////                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
+//                            openActivity(activity, store_id, audit_id, poll, route_id);
+//                        }
 
 
-                        if (audit_id == 102) {
-                            Poll poll = new Poll();
-                            //poll.setOrder(7);
-                            poll.setOrder(21);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
-                        }
-                        if (audit_id == 103) {
-                            Poll poll = new Poll();
-                            poll.setOrder(10);
-//                        PollActivity.createInstance((Activity) activity, store_id,audit_id,poll);
-                            openActivity(activity, store_id, audit_id, poll, route_id);
-                        }
-
+//************************* ACTIVIDADES DE COMPETECIAS PMI (MALBORO Y OTROS) ********************
                         if (audit_id == 104) {
-
                             Intent intent = new Intent(activity, ProductCompetityActivity.class);
                             intent.putExtra("store_id", store_id);
                             intent.putExtra("route_id", route_id);
@@ -564,8 +582,22 @@ public class StoreAuditActivity extends AppCompatActivity implements OnMapReadyC
                             intent.putExtra("publicity_id", 0);
                             intent.putExtra("product_id", 0);
                             startActivity(intent);
-
                         }
+ //************************* ACTIVIDADES DE LA COMPETENCIA CIGARRILLOS ELÉCTRÓNICOS (STLTH, RELX, INDY, OTROS) ********************
+                        if (audit_id == 135) {
+                            Intent intent = new Intent(activity, ProductCompetityActivity.class);
+                            intent.putExtra("store_id", store_id);
+                            intent.putExtra("route_id", route_id);
+                            intent.putExtra("audit_id", audit_id);
+                            intent.putExtra("orderPoll", 0);
+//                intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+                            intent.putExtra("category_product_id", 227);
+                            intent.putExtra("publicity_id", 0);
+                            intent.putExtra("product_id", 0);
+                            startActivity(intent);
+                        }
+
+
 
                     }
 

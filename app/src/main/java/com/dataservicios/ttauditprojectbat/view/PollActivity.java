@@ -578,7 +578,7 @@ public class PollActivity extends AppCompatActivity {
 
         if(company.getApp_id().equals("bodega")) {
             switch (orderPoll) {
-//--------Información-----------
+//--------Información GENERAL-----------
                 case 1:
                     if (isYesNo == 1) {
                         if (!AuditUtil.insertPollDetail(pollDetail)) return false;
@@ -587,39 +587,38 @@ public class PollActivity extends AppCompatActivity {
                        // if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
                     }
                     break;
-//                case 2:
-//
-//                    if (isYesNo == 1) {
-//                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                      //  if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()))
-//                         //   return false;
-//                    } else if (isYesNo == 0) {
-//                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                      //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
-//                    }
-//                        break;
+                case 2:
+                    if (isYesNo == 1) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                      //  if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()))
+                         //   return false;
+                    } else if (isYesNo == 0) {
+                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                      //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
+                    }
+                        break;
                 case 30:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
 
-                case 31:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
-                case 32:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
-                case 60:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
-                case 3:
-                    if (isYesNo == 1) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                        if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()));
-                        //   return false;
-                    } else if (isYesNo == 0) {
-                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                        //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
-                    }
+//                case 31:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
+//                case 32:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
+//                case 60:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
+//                case 3:
+//                    if (isYesNo == 1) {
+//                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                        if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()));
+//                        //   return false;
+//                    } else if (isYesNo == 0) {
+//                        if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                        //  if (!AuditUtil.closeAllAuditRoadStore(store_id, company_id)) return false;
+//                    }
 
 //--------Efectividad-----
 // ------
@@ -627,49 +626,33 @@ public class PollActivity extends AppCompatActivity {
 
 
 
-// ----------------------- Auditoria Bat--------------------
+// ----------------------- INFORMACI{ON DE AUDITORIA --------------------
 //
-//                        case 6:
-//                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                            break;
-                        case 7:
+                        case 110:
                             if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                             break;
-                        case 70:
-                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                            break;
-                        case 100:
-                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                            break;
-                        case 101:
-                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                            break;
-//                        case 8:
-//                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                            break;
-//                        case 21:
-//                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                            break;
-//                        case 20:
-//                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-//                            break;
-                        case 21:
-                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                            break;
-
-
                         case 50:
                             if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                             break;
+                        case 120:
+                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                            break;
 
+                        case 8:
+                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                            break;
+                        case 130:
+                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                            break;
+                        case 140:
+                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                            break;
 
+                        case 21:
+                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                            if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()))
+                            break;
 
-
-//                        case 22:
-//                            if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                           // if (!AuditUtil.closeAuditStore(audit_id, store_id, company_id, route.getId()))
-                              //  return false;
-//                            break;
 
 // ----------------------- Incidencias cigarreras Bat--------------------
 
@@ -1098,8 +1081,8 @@ public class PollActivity extends AppCompatActivity {
                 case 1:
 
                     if(isYesNo==1) {
-//                        poll.setOrder(2);
-                        poll.setOrder(30);
+
+                        poll.setOrder(2);
                         openActivity(activity, store_id,audit_id,poll,route_id);
                         finish();
                     } else if(isYesNo==0){
@@ -1112,50 +1095,50 @@ public class PollActivity extends AppCompatActivity {
                     }
                     break;
                 //break;
-//                case 2:
-//                    if(isYesNo==1) {
-//                        poll.setOrder(30);
-//                        openActivity(activity, store_id,audit_id,poll,route_id);
-//                        finish();
-//                    } else if(isYesNo==0){
-////                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
-////                        for (AuditRoadStore m: auditRoadStores){
-////                            m.setAuditStatus(1);
-////                            auditRoadStoreRepo.update(m);
-////                        }
+                case 2:
+                    if(isYesNo==1) {
+                        poll.setOrder(30);
+                        openActivity(activity, store_id,audit_id,poll,route_id);
+                        finish();
+                    } else if(isYesNo==0){
+//                        ArrayList<AuditRoadStore> auditRoadStores = (ArrayList<AuditRoadStore>) auditRoadStoreRepo.findByStoreId(store_id);
+//                        for (AuditRoadStore m: auditRoadStores){
+//                            m.setAuditStatus(1);
+//                            auditRoadStoreRepo.update(m);
+//                        }
+
+                    auditRoadStore.setAuditStatus(1);
+                    auditRoadStoreRepo.update(auditRoadStore);
+                        finish();
+                    }
+                    break;
+
+//                case 30:
+//                    poll.setOrder(31);
+//                    openActivity(activity, store_id,audit_id,poll,route_id);
+//                    finish();
+//                    break;
+
+//                case 31:
+//                    poll.setOrder(32);
+//                    openActivity(activity, store_id,audit_id,poll,route_id);
+//                    finish();
+//                    break;
 //
-//                    auditRoadStore.setAuditStatus(1);
-//                    auditRoadStoreRepo.update(auditRoadStore);
-//                        finish();
-//                    }
+//
+//                case 32:
+//                    poll.setOrder(60);
+//                    openActivity(activity, store_id,audit_id,poll,route_id);
+//                    finish();
+//                    break;
+//
+//                case 60:
+//                    poll.setOrder(3);
+//                    openActivity(activity, store_id,audit_id,poll,route_id);
+//                    finish();
 //                    break;
 
                 case 30:
-                    poll.setOrder(31);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-                case 31:
-                    poll.setOrder(32);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-
-                case 32:
-                    poll.setOrder(60);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-                case 60:
-                    poll.setOrder(3);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-                case 3:
 
                     Intent intent = new Intent(activity, ProductCompetityActivity.class);
                     intent.putExtra("store_id"              , store_id);
@@ -1173,40 +1156,58 @@ public class PollActivity extends AppCompatActivity {
                     break;
 
 
-//----------------------- Auditoria Bat--------------------
+//----------------------- INFORMACI{ON DE AUDITOR{IA--------------------
 
 
-//                case 6:
-//                    poll.setOrder(7);
-//                    openActivity(activity, store_id,audit_id,poll,route_id);
-//                    finish();
-//                    break;
-
-                case 21:
-                    if(isYesNo==1) {
-                        poll.setOrder(7);
-                        openActivity(activity, store_id,audit_id,poll,route_id);
-                        finish();
-                    } else if(isYesNo==0){
-//                        auditRoadStore.setAuditStatus(1);
-//                        auditRoadStoreRepo.update(auditRoadStore);
-                        poll.setOrder(7);
-                        openActivity(activity, store_id,audit_id,poll,route_id);
-                        finish();
-                    }
-                    break;
-
-                case 7:
+                case 110:
                     poll.setOrder(50);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
-
                 case 50:
-                    poll.setOrder(70);
+                    poll.setOrder(120);
                     openActivity(activity, store_id,audit_id,poll,route_id);
                     finish();
                     break;
+                case 120:
+                    poll.setOrder(8);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 8:
+                    poll.setOrder(130);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+                case 130:
+                    poll.setOrder(140);
+                    openActivity(activity, store_id,audit_id,poll,route_id);
+                    finish();
+                    break;
+
+                case 21:
+//                    if(isYesNo==1) {
+//                        poll.setOrder(7);
+//                        openActivity(activity, store_id,audit_id,poll,route_id);
+//                        finish();
+//                    } else if(isYesNo==0){
+////                        auditRoadStore.setAuditStatus(1);
+////                        auditRoadStoreRepo.update(auditRoadStore);
+//                        poll.setOrder(7);
+//                        openActivity(activity, store_id,audit_id,poll,route_id);
+//                        finish();
+//                    }
+                   auditRoadStore.setAuditStatus(1);
+                   auditRoadStoreRepo.update(auditRoadStore);
+                   break;
+
+//                case 7:
+//                    poll.setOrder(50);
+//                    openActivity(activity, store_id,audit_id,poll,route_id);
+//                    finish();
+//                    break;
+
+
 
 //                case 9:
 //                    poll.setOrder(20);
@@ -1219,38 +1220,38 @@ public class PollActivity extends AppCompatActivity {
 //                    finish();
 //                    break;
 
-                case 70:
-//                    poll.setOrder(22);
+//                case 70:
+////                    poll.setOrder(22);
+////                    openActivity(activity, store_id,audit_id,poll,route_id);
+////                    finish();
+//
+//                    Intent intentP = new Intent(activity, ProductCompetityActivity.class);
+//                    intentP.putExtra("store_id"              , store_id);
+//                    intentP.putExtra("route_id"              , route_id);
+//                    intentP.putExtra("audit_id"              , audit_id);
+//                    intentP.putExtra("orderPoll"             , poll.getOrder());
+////                intentP.putExtra("category_product_id"   , poll.getCategory_product_id());
+//                    intentP.putExtra("category_product_id"   , 205);
+//                    intentP.putExtra("publicity_id"          , poll.getPublicity_id());
+//                    intentP.putExtra("product_id"            , poll.getProduct_id());
+//                    startActivity(intentP);
+//
+//                    finish();
+//
+//                    break;
+
+
+//                case 100:
+//                    poll.setOrder(101);
 //                    openActivity(activity, store_id,audit_id,poll,route_id);
 //                    finish();
-
-                    Intent intentP = new Intent(activity, ProductCompetityActivity.class);
-                    intentP.putExtra("store_id"              , store_id);
-                    intentP.putExtra("route_id"              , route_id);
-                    intentP.putExtra("audit_id"              , audit_id);
-                    intentP.putExtra("orderPoll"             , poll.getOrder());
-//                intentP.putExtra("category_product_id"   , poll.getCategory_product_id());
-                    intentP.putExtra("category_product_id"   , 205);
-                    intentP.putExtra("publicity_id"          , poll.getPublicity_id());
-                    intentP.putExtra("product_id"            , poll.getProduct_id());
-                    startActivity(intentP);
-
-                    finish();
-
-                    break;
-
-
-                case 100:
-                    poll.setOrder(101);
-                    openActivity(activity, store_id,audit_id,poll,route_id);
-                    finish();
-                    break;
-
-                case 101:
-                    auditRoadStore.setAuditStatus(1);
-                    auditRoadStoreRepo.update(auditRoadStore);
-                    finish();
-                    break;
+//                    break;
+//
+//                case 101:
+//                    auditRoadStore.setAuditStatus(1);
+//                    auditRoadStoreRepo.update(auditRoadStore);
+//                    finish();
+//                    break;
 
 //                case 22:
 //                    auditRoadStore.setAuditStatus(1);

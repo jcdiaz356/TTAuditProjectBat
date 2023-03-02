@@ -505,26 +505,28 @@ public class PollProductActivity extends AppCompatActivity {
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
 
-
-
 // ----------------------- Actividades de la competencia Bat--------------------
                 case 14:
                     if (!AuditUtil.insertPollDetail(pollDetail)) return false;
                     break;
+// ----------------------- ACTIVIDADES DE LA COMPETENCIA CIGARRILLOS ELÉCTRÓNICOS (STLTH, RELX, INDY, OTROS)--------------------
+                case 200:
+                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+                    break;
 
 //---------------------CAMPAÑAS - PARTNERSHIPS
-
-                case 40:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
-
-                case 41:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
-
-                case 42:
-                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
-                    break;
+//
+//                case 40:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
+//
+//                case 41:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
+//
+//                case 42:
+//                    if (!AuditUtil.insertPollDetail(pollDetail)) return false;
+//                    break;
 
             }
         }
@@ -664,19 +666,22 @@ public class PollProductActivity extends AppCompatActivity {
                     productRepo.update(product);
                     finish();
                     break;
-                case 9:
+//                case 9:
 //                product.setStatus(1);
 //                productRepo.update(product);
 //                finish();
-                    break;
-
-
-
-
+//                    break;
 // ----------------------- Actividades de la competencia Bat--------------------
 
-
                 case 14:
+                    product.setStatus(1);
+                    productRepo.update(product);
+                    finish();
+                    break;
+
+// ----------------------- ACTIVIDADES DE LA COMPETENCIA CIGARRILLOS ELÉCTRÓNICOS (STLTH, RELX, INDY, OTROS)--------------------
+
+                case 200:
                     product.setStatus(1);
                     productRepo.update(product);
                     finish();
@@ -687,30 +692,44 @@ public class PollProductActivity extends AppCompatActivity {
                     productRepo.update(product);
                     finish();
                     break;
+// ----------------------- ACTIVIDADES DE LA COMPETENCIA CIGARRILLOS ELÉCTRÓNICOS (STLTH, RELX, INDY, OTROS)--------------------
 
-
-//---------------------CAMPAÑAS - PARTNERSHIPS
-
-                case 40:
-
-                    poll.setOrder(41);
-                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
-//                    product.setStatus(1);
-//                    productRepo.update(product);
+                case 10:
+                    poll.setOrder(11);
+                    openPollActivity(activity, store_id,audit_id,poll);
                     finish();
                     break;
-                case 41:
-                    poll.setOrder(42);
-                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
-//                    product.setStatus(1);
-//                    productRepo.update(product);
-                    finish();
-                    break;
-                case 42:
+
+                case 11:
                     product.setStatus(1);
                     productRepo.update(product);
                     finish();
                     break;
+
+
+
+//---------------------CAMPAÑAS - PARTNERSHIPS
+
+//                case 40:
+//
+//                    poll.setOrder(41);
+//                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+////                    product.setStatus(1);
+////                    productRepo.update(product);
+//                    finish();
+//                    break;
+//                case 41:
+//                    poll.setOrder(42);
+//                    openPollProductActivity(activity, store_id,audit_id,poll,route_id);
+////                    product.setStatus(1);
+////                    productRepo.update(product);
+//                    finish();
+//                    break;
+//                case 42:
+//                    product.setStatus(1);
+//                    productRepo.update(product);
+//                    finish();
+//                    break;
 
             }
 

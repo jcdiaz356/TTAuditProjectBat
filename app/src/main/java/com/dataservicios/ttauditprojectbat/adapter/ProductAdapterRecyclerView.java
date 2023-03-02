@@ -110,9 +110,14 @@ public class ProductAdapterRecyclerView extends RecyclerView.Adapter<ProductAdap
                         poll.setOrder(14);
                     } else if (audit_id == 102){
                         poll.setOrder(8);
-                    }else if (audit_id == 117){
-                        poll.setOrder(40);
+                    } else if (audit_id == 135){
+                        poll.setOrder(200);
+                    } else if (audit_id == 103){
+                        poll.setOrder(10);
                     }
+//                    else if (audit_id == 117){
+//                        poll.setOrder(40);
+//                    }
                 }
 
                 if(company.getApp_id().equals("mantenimiento")) {

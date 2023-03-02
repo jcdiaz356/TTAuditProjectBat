@@ -278,19 +278,19 @@ public class ProductCompetityActivity extends AppCompatActivity {
                 }
 
                 else{
-
-                    Poll poll = new Poll();
-                    poll.setOrder(100);
-
-                    Intent intent = new Intent(activity, PollActivity.class);
-                    intent.putExtra("store_id"              , store_id);
-                    intent.putExtra("route_id"              , route_id);
-                    intent.putExtra("audit_id"              , audit_id);
-                    intent.putExtra("orderPoll"             , poll.getOrder());
-                    intent.putExtra("category_product_id"   , poll.getCategory_product_id());
-                    intent.putExtra("publicity_id"          , poll.getPublicity_id());
-                    intent.putExtra("product_id"            , poll.getProduct_id());
-                    startActivity(intent);
+//
+//                    Poll poll = new Poll();
+//                    poll.setOrder(100);
+//
+//                    Intent intent = new Intent(activity, PollActivity.class);
+//                    intent.putExtra("store_id"              , store_id);
+//                    intent.putExtra("route_id"              , route_id);
+//                    intent.putExtra("audit_id"              , audit_id);
+//                    intent.putExtra("orderPoll"             , poll.getOrder());
+//                    intent.putExtra("category_product_id"   , poll.getCategory_product_id());
+//                    intent.putExtra("publicity_id"          , poll.getPublicity_id());
+//                    intent.putExtra("product_id"            , poll.getProduct_id());
+//                    startActivity(intent);
                     finish();
                 }
 
